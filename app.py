@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
-import plotly.express as px
-import plotly.io as pio
+# import plotly.express as px
+# import plotly.io as pio
 
 app = FastAPI()
 
@@ -9,11 +9,12 @@ app = FastAPI()
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
     # Generate a Plotly figure
-    fig = px.line(x=[1, 2, 3, 4], y=[1, 4, 2, 3],
-                  title="Interactive Plotly Plot")
+    # fig = px.line(x=[1, 2, 3, 4], y=[1, 4, 2, 3],
+    #               title="Interactive Plotly Plot")
 
     # Convert the Plotly figure to HTML
-    graph_html = pio.to_html(fig, full_html=False)
+    # graph_html = pio.to_html(fig, full_html=False)
+    graph_html = ""
 
     # HTML template
     html_content = f"""
